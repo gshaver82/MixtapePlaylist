@@ -1,0 +1,18 @@
+<table class="table m-0">
+    <thead class="font-block">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Artist</th>
+        </tr>
+    </thead>
+    <tbody class="font-comment">
+        {{#each dataValues.Songs}}
+            <tr>
+                <td scope="row">{{toInt playlist_song_junction_table.dataValues.song_order}}</td>
+                <td>{{dataValues.song_title}}</td>
+                <td>{{dataValues.song_artist}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

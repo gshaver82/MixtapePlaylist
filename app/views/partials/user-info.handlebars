@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card text-white bg-xtradark my-4">
+        <div class="card-header">
+            <div class="font-comment h2 row no-gutters align-items-end">
+                <div class="col-md-fluid font-block display-1">User Info</div>
+                <div class="col-md-fluid mx-4 align-self-center"> for </div>
+                <div class="col-md-fluid font-block display-3 pb-1 random-color">{{User.dataValues.username}}</div>
+            </div>
+            <div class="card-body py-0 row font-marker">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-lg card-text">
+                            <div class="text-muted mb-1">Last login :</div>
+                            <div class="font-block h2 m-0" data-date="{{User.dataValues.last_login}}" id="last-login">
+                            </div>
+                        </div>
+                        <div class="col-lg card-text">
+                            <div class="text-muted mb-1">Date Created :</div>
+                            <div class="font-block h2 m-0" data-date="{{User.dataValues.createdAt}}" id="date-created">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-lg card-text">
+                            <div class="text-muted mb-1">Total upvoted :</div>
+                            <div class="font-block h2 m-0">{{dataValues.user_total_upvotes}}</div>
+                        </div>
+                        <div class="col-lg card-text">
+                            <div class="text-muted mb-1">Total downvoted :</div>
+                            <div class="font-block h2 m-0">{{dataValues.user_total_downvotes}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

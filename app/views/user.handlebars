@@ -1,0 +1,27 @@
+{{#if authenticated}}
+    {{> header-user}}
+    <script type="text/javascript" src="/assets/js/vote.js"></script>  
+{{else}}
+    {{> header-login}}
+    <script type="text/javascript" src="/assets/js/vote-guest.js"></script>  
+{{/if}}
+
+{{#with playlists.[0]}} 
+    {{> user-info}}
+{{/with}}
+
+<div class="container mb-4">
+    <div class="accordion" id="accordionExample">
+        <div class="card bg-xtradark">
+            {{#each playlists}}
+            {{> playlist}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<div class="mt-3">
+    {{> footer}}
+</div>
+
+<script type="text/javascript" src="/assets/js/index.js"></script>

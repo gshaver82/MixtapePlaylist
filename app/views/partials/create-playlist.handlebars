@@ -1,0 +1,100 @@
+<div class="container mb-4">
+    <div class="card">
+        {{!-- HOW DO YOU KEEP THE PLAYLIST CARD OPEN? --}}
+        <div class="card-header px-0" id="heading-create">
+            <div class="mb-0 d-flex justify-content-between align-items-center pl-1">
+                <button class="btn btn-block text-left text-random" type="button" data-toggle="collapse"
+                    data-target="#collapse-create" aria-expanded="true" aria-controls="collapse-create">
+                    <h2 class="m-0 font-marker d-flex align-items-center">
+                        <div><i class="fa fa-plus-circle fa-inverse mr-3" aria-hidden="true"></i>
+                            Create Playlist</div>
+                    </h2>
+                </button>
+            </div>
+        </div>
+        <div id="collapse-create" class="collapse" aria-labelledby="heading-create" data-parent="#accordionExample">
+            <div class="card-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="playlist-title" class="col-fluid col-form-label pl-3 font-block">Title</label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="playlist-title"
+                                placeholder="time to think of something catchy...">
+                        </div>
+                        <div class="invalid-feedback">Field cannot be left blank.</div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="playlist-description"
+                            class="col-fluid col-form-label pl-3 font-block">Description</label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="playlist-description"
+                                placeholder="tell us all about it...">
+                        </div>
+                        <div class="invalid-feedback">Field cannot be left blank.</div>
+                    </div>
+                    <div class="form-group">
+                        {{!--  <textarea class="form-control" id="playlist-string" rows="5"
+                            placeholder="List your playlist here."></textarea>--}}
+                        <table class="table m-0" id="table-songs">
+                            <thead class="font-block">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Artist</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="song-table font-comment">
+                                {{!-- <tr>
+                                    <td class="no-border" scope="row">1</td>
+                                    <td class="no-border">So High (Kodak to Graph Remix)</td>
+                                    <td class="no-border">Doja Cat</td>
+                                    <td class="no-border text-center pt-3 song-button text-random"><i class="fa fa-times"></i></td>
+                                </tr> --}}
+                            </tbody>
+                        </table>
+
+                        <div class="song-div row m-0">
+                            <div class="input-group my-1 p-md-0 p-0 pr-md-2 col-md">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text pt-2 font-block">Song</span>
+                                </div>
+                                <input type="text" class="form-control" id="song-name" aria-label="Song Name"
+                                    aria-describedby="song-name">
+                            </div>
+                            <div class="input-group my-1 p-md-0 p-0 pr-md-2 col-md">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text pt-2 font-block">Artist</span>
+                                </div>
+                                <input type="text" class="form-control" id="song-artist" aria-label="Song Name"
+                                    aria-describedby="song-artist">
+                            </div>
+                            <button class="text-random song-button col-md-fluid d-flex align-items-center mx-2 anti-button" id="add-song">
+                                <i class="fa fa-plus-circle mr-1" aria-hidden="true"></i>
+                                <span class="pt-1 m-0 h5 font-block">Add to playlist</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                {{!-- ALERT --}}
+                <div class="row alert alert-danger mt-3 py-2 alert-dismissible" role="alert" id="db-alert">
+                    <h4 class="font-block mb-0 mt-1" id="alert-text"></h4>
+                    <button type="button" class="close anti-button" data-hide="alert" aria-label="Close">
+                        <i class="fa fa-times text-danger"></i>
+                    </button>
+                </div>
+                {{!-- ALERT END --}}
+                <div class="row no-gutters align-items-center">
+                    <div class="col-fluid d-none d-sm-block font-comment mr-3">Drag around your songs to reorder them!</div>
+                    <div class="col">
+                        <div class="row no-gutters align-items-center float-lg-right">
+                            <div class="col-md-fluid d-none d-md-inline-block font-comment text-right mr-3">express yourself - </div>
+                            <button class="col-md btn btn-dark btn-lg font-block px-3" id="submit-playlist">Post
+                                Playlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

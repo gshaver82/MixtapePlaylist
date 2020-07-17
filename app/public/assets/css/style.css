@@ -1,0 +1,384 @@
+/*Notes
+background color: #1D2023
+background color inside boxes: #171719
+font: Open Sans
+blue = #3772FF
+orange = FE3326
+*/
+
+* {
+    --random-color: #3772FF; 
+    --random-dark: #14213D; 
+}
+
+body {
+    background-color: #1D2023;
+    color:#E4E7E9;
+}
+
+hr {
+    background-color: #3D4148 !important;
+    color:#E4E7E9;
+}
+
+.table {
+    color:#A9ABAD !important;
+}
+
+tr {
+    background-color: #1D2023 !important;
+}
+
+tr:hover  {
+    background-color: #25292D !important;
+    color:#E4E7E9;
+}
+
+th {
+    background-color: #1D2023 !important;
+    color:#3D4148;
+    border: none !important;
+}
+
+td {
+    border-top: 3px solid #171719 !important;
+    font-size: larger;
+}
+
+th:first-of-type {
+    border-top-left-radius: 10px;
+}
+th:last-of-type {
+    border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-border {
+    border-radius: 0px !important;
+}
+
+.song-div {
+    border-top: 3px solid #171719 !important;
+    background-color: #1D2023 !important;
+    padding:0.75rem;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.song-button {
+    cursor: pointer;
+}
+
+.navbar-brand {
+    padding: 30px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 40px;
+}
+
+.bg-xtradark {
+    background-color: #171719;
+}
+
+.bg-medium {
+    background-color: #3D4148;
+}
+
+.btn-xlg {
+    font-size: 2rem !important;
+}
+
+/* .stripe-inner {
+    height:5px;
+    background: linear-gradient(90deg, rgba(23,23,25,1) 0%, rgba(255,255,255,1) 0%, rgba(8,0,158,1) 14%, rgba(249,14,62,1) 17%, rgba(255,180,0,1) 20%, rgba(235,86,0,1) 22%, rgba(23,23,25,1) 42%) !important;
+} */
+
+.signin, .create {
+    background-color: #171719;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 5px;
+}
+
+.font-marker {
+    font-family: 'Permanent Marker', sans-serif;
+}
+
+.font-block {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-brand {
+    font-family: 'Rock Salt', sans-serif;
+}
+
+.font-comment {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 1.3rem;
+}
+
+.text-random{
+    color:#E4E7E9 !important; 
+}
+
+.text-random:hover {
+    color: var(--random-color) !important;
+}
+
+.text-bright{
+    color:#E4E7E9 !important; 
+}
+
+.text-bright:hover{
+    color:#3772FF !important; 
+}
+
+.text-activated {
+    color:#FE3326 !important;
+}
+
+
+.anti-button {
+    background-color: inherit !important;
+    border:none !important;
+    box-shadow:none;
+    outline:none;
+    cursor: pointer;  
+    text-shadow:none; 
+}
+
+.icon-larger {
+    margin-top: 0.3rem;
+    font-size: 1.4rem;
+}
+
+.icon-link {
+    color: #73767B !important;
+    font-size: 1.5rem;
+}
+
+.icon-vote {
+    color:#E4E7E9 !important;
+    font-size: 1.5rem;
+    line-height: 0.8rem !important;
+}
+
+.icon-div {
+    padding: 0.8rem !important;
+    padding-top: 1.1rem !important;
+}
+
+.icon-vote:active, .icon-vote:focus {
+    border:none !important;
+    box-shadow:none;
+    outline:none;
+}
+
+:disabled, :disabled:hover {
+    color:#3D4148 !important;
+    pointer-events: none;
+}
+
+.delete-playlist {
+    background-color: inherit !important;
+    border:none !important;
+    box-shadow:none;
+    outline:none;
+    color:#E4E7E9 !important;
+    /* line-height: 0.8rem; */
+    cursor: pointer;
+}
+
+.delete-playlist:hover {
+    cursor: pointer;
+    color:#dc3545 !important;
+}
+
+.delete-playlist:active, .delete-playlist:focus {
+    border:none !important;
+    box-shadow:none;
+    outline:none;
+}
+
+.small-comment {
+    font-size: 1.2rem;
+    line-height: 1rem;
+}
+
+.upvotes {
+    padding-top: 0.4rem;
+    font-size: larger;
+}
+
+.vote-div {
+    margin: auto;
+    width: 50px;
+}
+
+/* ====================== Bootstrap Tweaks Below ====================== */
+
+.alert {
+    border-image: none;
+    background-color: #2E191C !important;
+    border: solid 2px #721c24 !important;
+    /* display:inline-block; */
+}
+
+.btn-primary {
+    background-color: var(--random-dark) !important;
+    border: none !important;
+}
+
+.btn-primary:hover {
+    background-color: #1d2023 !important;
+}
+
+.text-white{
+    color:#E4E7E9 !important;
+}
+
+.text-muted{
+    color:#A9ABAD !important;
+}
+
+.modal-content {
+    background-color: #1d2023 !important;
+    border-color: #3D4148 !important; 
+    border-radius:.12;
+}
+
+.modal-header, .modal-footer {
+    border-color: #3D4148 !important; 
+}
+
+.form-control {
+    background-color: #1d2023 !important;
+    border:1px solid #3D4148 !important;
+    border-radius:.12;
+    box-shadow:none;
+    outline:none;
+    color:#E4E7E9 !important;
+}
+
+.form-control:valid {
+    background-color: #1d2023;
+    border:inherit;
+    color:inherit;
+}
+
+::placeholder {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 1.3rem;
+}
+
+.input-group-text {
+    background-color: #3D4148 !important;
+    border:inherit;
+    color:#E4E7E9;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: #fff !important;
+  }
+
+
+/*All the cards in the page*/
+.card, .jumbotron {
+    background-color: #171719;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card-header {
+    border-radius: 5px !important;
+}
+
+.card-gap {
+    margin-top: 6rem;
+}
+
+.carousel-item img {
+    max-height: 750px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+    .h2, h2 {
+        font-size: 1.7rem !important;
+    }
+    .card-gap {
+        margin-top: 3rem;
+    }
+    .display-3 {
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .h4 {
+        font-size: 1.2rem !important;
+    }
+    .card-gap {
+        margin-top: 1rem;
+    }
+    .icon-div {
+        border-radius: 1rem;
+    } 
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0;
+    }
+    .display-3 {
+        font-size: 3.5rem !important;
+    }
+    .card {
+        border-radius: 0 !important;
+    }
+    .form-control::placeholder {
+        font-size: 1rem !important;
+    }
+    .icon-link {
+        font-size: 1.4rem;
+        line-height: 0.4rem;
+    }
+    td {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .font-comment {
+        font-size: 1.1rem;
+    }
+    .display-1 {
+        font-size: 5rem;
+    }
+    .h2, h2 {
+        font-size: 1.5rem !important;
+    }
+    .h4 {
+        font-size: 1rem !important;
+    }
+    body {
+        font-size: 0.7rem;
+    }
+    td {
+        font-size: 1.3rem;
+    }
+}

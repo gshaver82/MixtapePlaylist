@@ -1,0 +1,38 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "An example MVC architecture group project using sequelize and passport",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run lint",
+    "start": "node server.js",
+    "lint": "eslint --quiet .",
+    "fix": "eslint --fix .",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterBaker644/Mixtape.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/PeterBaker644/Mixtape/issues"
+  },
+  "homepage": "https://github.com/PeterBaker644/Mixtape#readme",
+  "dependencies": {
+    "argon2": "^0.26.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "handlebars-helpers": "^0.10.0",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,48 @@
+<div class="card-header py-1 m-0" id="heading{{dataValues.id}}">
+    <div class="mb-0 pr-1 row playlist-container" data-playlist="{{dataValues.id}}">
+        <div class="col-fluid vote-div" data-playlist="{{dataValues.id}}" data-vote="{{dataValues.upvoted}}">
+            <div class="d-flex justify-content-around">
+                <button class="fa fa-angle-up text-random text-decoration-none icon-vote anti-button upvote"
+                    aria-hidden="true"></button>
+            </div>
+            <div class="upvotes text-center font-block random-light">
+                {{#if dataValues.upvotes}}
+                {{dataValues.upvotes}}
+                {{else}}
+                0
+                {{/if}}
+            </div>
+            <div class="d-flex justify-content-around">
+                <button class="fa fa-angle-down text-random text-decoration-none icon-vote anti-button downvote"
+                    aria-hidden="true"></button>
+            </div>
+        </div>
+        <div class="col btn text-left text-white ml-2" type="button" data-toggle="collapse"
+            data-target="#collapse{{dataValues.id}}" aria-expanded="true" aria-controls="collapse{{dataValues.id}}">
+            {{!-- THIS WILL FAIL GIVEN A LONG ENOUGH NAME, FIX --}}
+            <h2 class="m-0 row font-marker d-flex align-items-baseline">
+                <div class="col-fluid text-truncate pr-3">{{dataValues.title}}</div>
+                {{#if dataValues.playlist_link}}
+                <a href="{{dataValues.playlist_link}}" target="_blank" class='col-fluid mr-2 font-comment text-random icon-link anti-a mb-0 p-0'>
+                    <i class='fa fa-youtube m-1'></i>
+                </a>
+                {{/if}}
+                <div class="col-fluid">
+                    <span class="h4 font-block random-color author">Authored by: </span>
+                    <button class="h4 font-block text-bright author-link author anti-button mb-0 p-0">{{User.dataValues.username}}</button>
+                </div>
+            </h2>
+            <div class="font-comment text-muted text-truncate">{{dataValues.description}}</div>
+        </div>
+        {{!-- <button class='font-comment d-flex delete-playlist' data-toggle='modal' data-target='#deleteWarning'>
+                <span class='d-none d-lg-block'>Delete Playlist </span>
+                <i class='fa fa-times m-3 m-lg-1'></i>
+            </button> --}}
+    </div>
+</div>
+<div id="collapse{{dataValues.id}}" class="collapse" aria-labelledby="heading{{dataValues.id}}"
+    data-parent="#accordionExample">
+    <div class="card-body p-0 mt-3">
+        {{> songlist}}
+    </div>
+</div>
